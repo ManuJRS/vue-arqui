@@ -1,24 +1,27 @@
 <script lang="ts" setup>
-// map
-const numbers:number[] = [1, 2, 3, 4, 5]
+// forEch vs map
 
-const vieNumbers: number[] = numbers.map(num => num)
-console.log(vieNumbers)
+const numbers: number[] = [1, 2, 3, 4]
 
-// forEch
+numbers.forEach((num) => {
+    console.log(`forEach: ${num}`)
+})
 
-const prices: number [] = [100, 200, 300]
-let suma = 0
+numbers.map((num) => {
+    console.log(`map: ${num}`)
+})
+
+// Si quisiera crear un nuevo array
 
 
-prices.forEach(num => {
-    suma += num
-});
+const double = numbers.map((num)=>{
+    return num * 2
+})
 
-console.log(suma)
+console.log(double)
 
 </script>
 
 <template>
-    <h1>Arrays</h1>
+    <h1> </h1>
 </template>
