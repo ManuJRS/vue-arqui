@@ -80,8 +80,10 @@ transformDto.forEach(room => {
   }
 })
 
+import ArrayMetods from './views/ArrayMetods.vue';
 </script>
 
 <template>
+  <ArrayMetods />
   <ProductSearch />
 </template>
