@@ -1,5 +1,5 @@
 import { DummyJsonApi } from '../../../modules/shared/infraestructure/DummyJsonApi'
-import { Failure, Success, type Result } from '@/domain/shared/Result'
+import { Failure, Success, type Result } from '../../shared/Result'
 
 type ProductDto = {
   id: number
