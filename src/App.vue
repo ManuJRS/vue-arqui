@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import ProductSearch from './views/ProductSearch.vue'
+import Destructuring from './views/Destructuring.vue'
+import ClasesPractice from './views/ClasesPractice.vue'
 
 type RoomsApi = {
   id: number
@@ -86,4 +88,6 @@ import ArrayMetods from './views/ArrayMetods.vue';
 <template>
   <ArrayMetods />
   <ProductSearch />
+  <Destructuring/>
+  <ClasesPractice />
 </template>
