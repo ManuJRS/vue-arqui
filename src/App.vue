@@ -3,6 +3,7 @@ import ProductSearch from './views/ProductSearch.vue'
 import Destructuring from './views/Destructuring.vue'
 import ClasesPractice from './views/ClasesPractice.vue'
 import ClasesRepaso from './views/ClasesRepaso.vue'
+import TempControl from './views/TempControl.vue'
 
 type RoomsApi = {
   id: number
@@ -92,4 +93,5 @@ import ArrayMetods from './views/ArrayMetods.vue'
   <Destructuring />
   <ClasesPractice />
   <ClasesRepaso />
+  <TempControl />
 </template>
