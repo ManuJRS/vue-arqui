@@ -5,6 +5,7 @@ import ClasesPractice from './views/ClasesPractice.vue'
 import ClasesRepaso from './views/ClasesRepaso.vue'
 import TempControl from './views/TempControl.vue'
 import ChildButton from './components/ChildButton.vue'
+import UseCard from './components/UseCard.vue'
 
 const onChildClick = (message: string) => {
   console.log('Evento recibido', message)
@@ -83,7 +84,7 @@ const transformDto: TransformDto[] = roomsApi.map((index) => ({
   value: index.id,
   label: getPaxes(index.name, index.guests),
   totalPrice: getTotalPrice(index.pricePerNight, index.nights),
-  canBook: getIsAvailable(index.isAvailable),§
+  canBook: getIsAvailable(index.isAvailable),
   isLongStay: getStay(index.nights),
 }))
 
@@ -104,4 +105,5 @@ import ArrayMetods from './views/ArrayMetods.vue'
   <ClasesRepaso />
   <TempControl />
   <ChildButton @clicked="onChildClick"/>
+  <UseCard/>
 </template>
