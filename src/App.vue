@@ -6,7 +6,7 @@ import ClasesRepaso from './views/ClasesRepaso.vue'
 import TempControl from './views/TempControl.vue'
 import ChildButton from './components/ChildButton.vue'
 import UseCard from './components/UseCard.vue'
-
+import Clases from './Class&Objects/Clases.vue'
 const onChildClick = (message: string) => {
   console.log('Evento recibido', message)
 }
@@ -105,5 +105,6 @@ import ArrayMetods from './views/ArrayMetods.vue'
   <ClasesRepaso />
   <TempControl />
   <ChildButton @clicked="onChildClick"/>
+  <Clases/>
   <UseCard/>
 </template>
