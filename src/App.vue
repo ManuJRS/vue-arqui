@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ref } from 'vue';
+
 import ProductSearch from './views/ProductSearch.vue'
 import Destructuring from './views/Destructuring.vue'
 import ClasesPractice from './views/ClasesPractice.vue'
@@ -7,6 +9,9 @@ import TempControl from './views/TempControl.vue'
 import ChildButton from './components/ChildButton.vue'
 import UseCard from './components/UseCard.vue'
 import Clases from './Class&Objects/Clases.vue'
+import ChildTitle from './components/ChildTitle.vue'
+import PriceTag from './components/PriceTag.vue'
+import BadgeStatus from './components/BadgeStatus.vue';
 const onChildClick = (message: string) => {
   console.log('Evento recibido', message)
 }
@@ -95,9 +100,23 @@ transformDto.forEach((room) => {
 })
 
 import ArrayMetods from './views/ArrayMetods.vue'
+
+const price = ref(100)
+
+setTimeout(() => {
+  price.value = 1500
+}, 2000);
+
+type Status = 'active' | 'inactive' | 'pending'
+
+const status = ref<Status>('active')
+
 </script>
 
 <template>
+  <BadgeStatus :status="status"/>
+  <PriceTag :price="price" />
+  <ChildTitle title="Hola Vue"/>
   <ArrayMetods />
   <ProductSearch />
   <Destructuring />
