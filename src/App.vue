@@ -12,6 +12,9 @@ import Clases from './Class&Objects/Clases.vue'
 import ChildTitle from './components/ChildTitle.vue'
 import PriceTag from './components/PriceTag.vue'
 import BadgeStatus from './components/BadgeStatus.vue';
+import UseCardTwo from './components/UseCardTwo.vue';
+import ProductCard from './components/ProductCard.vue';
+
 const onChildClick = (message: string) => {
   console.log('Evento recibido', message)
 }
@@ -99,6 +102,12 @@ transformDto.forEach((room) => {
   }
 })
 
+const Products = [
+  { Id: 1, Title: "Laptop", Price: 1200, InStock: true },
+  { Id: 2, Title: "Mouse", Price: 0, InStock: true },
+  { Id: 3, Title: "Teclado", Price: 35, InStock: false },
+]
+
 import ArrayMetods from './views/ArrayMetods.vue'
 
 const price = ref(100)
@@ -126,4 +135,14 @@ const status = ref<Status>('active')
   <ChildButton @clicked="onChildClick"/>
   <Clases/>
   <UseCard/>
+  <UseCardTwo name="Manuel" :age="30" />
+  <ProductCard Title="Producto uno" :Price="34" :InStockL="true" />
+  <ProductCard
+  v-for="Product in Products"
+  :key="Product.Id"
+  :Id="Product.Id"
+  :Title="Product.Title"
+  :Price="Product.Price"
+  :InStockL="Product.InStock"
+  />
 </template>
